@@ -29,7 +29,6 @@
         {{- if $img -}}
         {{- $isSVG := eq $img.MediaType.SubType "svg" -}}
         {{- $isGIF := eq $img.MediaType.SubType "gif" -}}
-        <!-- {{- if $isSVG | or $isGIF -}} -->
         {{- if $isSVG -}}
         <object type="image/svg+xml" data="{{ $img.RelPermalink }}"></object>
         {{- else if $isGIF -}}
